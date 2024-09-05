@@ -1,3 +1,53 @@
 #colorBarra{
     background-color: #7dcea0;
 }
+#login_inic,#registro{
+    height:2vw;
+    width: 5vw;
+    color:white;
+    text-align: center;
+    text-justify: distribute;
+}
+
+/*Estilos para el formulario de registro*/
+.sign_up{
+    display: none;
+    position: fixed;
+    right: 40%;
+    top:40%;
+    width: 30%;
+    aspect-ratio: 1.8;
+    border: solid black 1px;
+    border-radius: 10px;
+    
+}
+
+#formulario{
+    display: flex;
+    position: relative;
+    flex-direction: column; 
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    justify-content: space-around;
+}
+.sign_up_display{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 30%;
+    aspect-ratio: 1.5;
+}
+.input_sign{
+    height: 15%;
+    border-radius: 5px;
+    font-size: 25px;
+    
+}
+#cerrar{
+    position: absolute;
+    width:7%;
+    aspect-ratio:1;
+    right:2%;
+    top:3%;
+}
