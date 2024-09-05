@@ -1,5 +1,7 @@
+//Función para el botón sign up : Muestra el formulario de registro.
+
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("registro", "cerrar").addEventListener('click', function() {
+    document.getElementById("registro").addEventListener('click', function() {
         
         var elemento = document.getElementById("sign_up");
 
@@ -12,4 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//Función para el botón cerrar (X) : Cierra el formulario de registro.
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('cerrar').addEventListener('click', function(){
+        let elemento= document.getElementById('sign_up');
+        elemento.style.display='none';
+    })
 
+
+})
