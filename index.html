@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/StyleBarra.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/StyleBarra.css">
     <title>La Panela en el Tolima</title>
 </head>
 <body>
@@ -277,18 +277,31 @@
 
     </div>
 
-    <form id="sign_up" class="sign_up">
+    <form id="sign_up" action="registroUno.php" class="sign_up" method="post">
       <div id="formulario"><h4>Registro</h4>
-      <input type="text" name="usuario" placeholder="Digita tu Usuario" class= "input_sign" id="usuario">
-      <input type="email" name="correo" placeholder="Digita tu correo"  class= "input_sign" id="correo">
-      <input type="password"name="passw" placeholder="Establece una contraseña"  class= "input_sign" id="passw">
+      <input type="text" name="usuario" placeholder="Digita tu Usuario" class= "input_sign" id="usuario" required>
+      <input type="email" name="email" placeholder="Digita tu correo"  class= "input_sign" id="correo" required>
+      <input type="password"name="password" placeholder="Establece una contraseña"  class= "input_sign" id="passw" required>
       <input type="submit" name="registrarse"  class= "input_sign" id="input_sign" value="submit">
       <button id="cerrar" >X</button>
+      <div id="messageReg"></div>
       </div>
 
     </form>
 
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/registro.js"></script>
+    <form id="login_form"  action="login.php"  class="login_form" method="post">
+      <div id="formulario1"><h4>Login</h4>
+      <input type="text" name="user" placeholder="Digita tu Usuario o email" class= "input_sign" id="usuario" required>     
+      <input type="password"name="passw" placeholder="Establece una contraseña"  class= "input_sign" id="passw" required>
+      <input type="submit" name="Login_buttom"  class= "input_sign" id="Login_buttom" value="Login">
+      <button id="cerrarL" >X</button>
+      <div id="message"></div>
+      </div>
+
+    </form>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
