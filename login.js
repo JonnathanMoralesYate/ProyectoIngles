@@ -13,12 +13,16 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     .then(response => response.json())
     .then(data => {
         const messageElement = document.getElementById("message");
+        let casillas= document.querySelectorAll('.input_sign');
         if (data.status === "success") {
             messageElement.style.color = "green";
             messageElement.textContent = data.message;
         } else {
             messageElement.style.color = "red";
             messageElement.textContent = data.message;
+        }
+        for(let i=0; i< casillas.length; i++){
+            casillas[i].value="";
         }
     })
     .catch(error => console.error('Error:', error));
@@ -38,12 +42,17 @@ document.getElementById("sign_up").addEventListener("submit", function(event) {
     .then(response => response.json())
     .then(data => {
         const messageElement = document.getElementById("messageReg");
+        let casillas=document.querySelectorAll('.input_sign');
         if (data.status === "success") {
             messageElement.style.color = "green";
-            messageElement.textContent = "Bienvenido, el registro ha sido exitoso.";
+            messageElement.textContent = data.mensaje;
+            
         } else {
             messageElement.style.color = "red";
-            messageElement.textContent = "El usuario y/o correo existentes. Intenta nuevamente";
+            messageElement.textContent = data.mensaje;
+        }
+        for(let i=0; i<=casillas.length; i++){
+            casillas[i].value="";
         }
     })
     .catch(error => console.error('Error:', error));

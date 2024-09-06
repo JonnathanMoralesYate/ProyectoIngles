@@ -28,7 +28,7 @@ $veriUs->bind_param("s", $usuario);
 $veriUs->execute();
 $veriUs->bind_result($conteo);
 $veriUs->fetch();
-echo "Numero de usuarios: $conteo";
+
 $veriUs->close();
 
 //Verificando si existen registros con el mismo email:
@@ -38,38 +38,37 @@ $veriUs->close();
     $veriEm->execute();
     $veriEm->bind_result($conteo1);
     $veriEm->fetch();
-    echo "Numero de correos: $conteo1";
+    
     $veriEm->close();
 
-if($conteo>0 || $conteo1>0){
-    echo json_encode(array("status" =>"error")); 
-
-}else{
+if($conteo==0 && $conteo1==0){ //sino se encontraron registros con el usuario o el correo.
+    
     // Encriptar la contraseña
 $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
 // Preparar y ejecutar la consulta
-$sql = "INSERT INTO lista_registro (usuario, email, passw) VALUES ('$usuario', '$email', '$password_hashed')";
+$sql =$conn->prepare("INSERT INTO lista_registro (usuario, email, passw) VALUES (?,?,?)");
+$sql->bind_param("sss", $usuario, $email,$password_hashed);
 
-if ($conn->query($sql) === TRUE) {
+if ($sql->execute()) {
 
-
-    echo json_encode(array("status" =>"success"));
+    echo json_encode(array("status" =>"success", "mensaje"=>"Bienvenido $usuario , el Registro ha sido exitoso."));
     
-    
+}else {
 
-} else {
-
-    echo json_encode(array("status" =>"error")); 
+    echo json_encode(array("status" =>"error", "mensaje"=>"Lo sentimos. Hubo un error a realizar el registro. ")); 
     
 }
 
-$veriEm->close();
+}else {
+
+    echo json_encode(array("status" =>"error", "mensaje"=>"Usuario y/o email no disponible. Intenta con otro Usuario/email")); 
+    
+}
 
 // Cerrar conexión
 $conn->close();
     
-}
 
 
 ?>
