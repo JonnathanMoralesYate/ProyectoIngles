@@ -5,12 +5,16 @@
     top:0;
     width: 100%;
 }
-#login_inic,#registro{
+#login_inic,#registro, #comentarios, #log_out{
     height:2vw;
-    width: 5vw;
+    width: 8vw;
     color:white;
     text-align: center;
     text-justify: distribute;
+    margin-right: 2%;
+}
+#comentarios, #log_out{
+    display: none;
 }
 
 /*Estilos para el formulario de registro*/
@@ -23,8 +27,6 @@
     aspect-ratio: 1.8;
     border: solid black 1px;
     border-radius: 10px;
- 
-    
 }
 
 #formulario, #formulario1{
@@ -56,4 +58,10 @@
     aspect-ratio:1;
     right:2%;
     top:3%;
+}
+#Bienvenida{
+    font-style: italic;
+    position: fixed;
+    top:2%;
+    right:2%;
 }

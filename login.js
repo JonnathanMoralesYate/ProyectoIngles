@@ -14,7 +14,21 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     .then(data => {
         const messageElement = document.getElementById("message");
         let casillas= document.querySelectorAll('.input_sign');
+        let welcom= document.getElementById('Bienvenida');
+        let coment= document.getElementById('comentarios');
+        let log_out=document.getElementById('log_out');
+        let login= document.getElementById('login_inic');
+        let register= document.getElementById('registro');
+
         if (data.status === "success") {
+
+            login.style.display="none";
+            register.style.display="none";
+            coment.style.display="block";
+            log_out.style.display= "block";
+            welcom.textContent="Hello "+ data.nombre + ". Welcome to How much do you know about PANELA!!";
+            welcom.style.fontWeight="bold";
+            welcom.style.color="orange";
             messageElement.style.color = "green";
             messageElement.textContent = data.message;
         } else {
