@@ -34,18 +34,4 @@ $consulta->close();
 
  $conexion->close();  
  
-?>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+?> 

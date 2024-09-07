@@ -12,6 +12,7 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     })
     .then(response => response.json())
     .then(data => {
+        let formularioInicio=document.getElementById('login_form');
         const messageElement = document.getElementById("message");
         let casillas= document.querySelectorAll('.input_sign');
         let welcom= document.getElementById('Bienvenida');
@@ -26,14 +27,18 @@ document.getElementById("login_form").addEventListener("submit", function(event)
             register.style.display="none";
             coment.style.display="block";
             log_out.style.display= "block";
-            welcom.textContent="Hello "+ data.nombre + ". Welcome to How much do you know about PANELA!!";
+            welcom.innerHTML = `Hello <span style="color: #ff9b62;">${data.nombre}</span>. Welcome to How much do you know about PANELA!!`;
             welcom.style.fontWeight="bold";
-            welcom.style.color="orange";
-            messageElement.style.color = "green";
-            messageElement.textContent = data.message;
+            welcom.style.color="#7dcea0";
+            welcom.style.backgroundColor="white";
+            welcom.style.borderRadius="4px";
+           formularioInicio.style.display="none";
         } else {
             messageElement.style.color = "red";
             messageElement.textContent = data.message;
+            messageElement.style.backgroundColor="#d6eacc";
+            messageElement.style.fontWeight="bold";
+            messageElement.style.fontStyle="italic";
         }
         for(let i=0; i< casillas.length; i++){
             casillas[i].value="";
