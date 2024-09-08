@@ -13,29 +13,48 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     .then(response => response.json())
     .then(data => {
                
-        const messageElement = document.getElementById("message");
+        
         let casillas= document.querySelectorAll('.input_sign');
+        let formularioInicio=document.getElementById('login_form');
+        const elemento = document.getElementById("message");
+        
+       
         if (data.status === "success") {
-           
+       
             const nombreUsuario=data.nombre;
             localStorage.setItem('sesionIniciada','true');
-            localStorage.setItem('elUser', nombreUsuario );          
+            localStorage.setItem('elUser', nombreUsuario );
+            location.reload();
+
+         
+            
+               
         } else {
-          
-            messageElement.textContent = data.message;
-            inicioFailed(messageElement);           
-        }
+            
+    
+    formularioInicio.style.display="block";    
+    elemento.textContent = data.message;
+    elemento.style.color = "red";
+    elemento.style.backgroundColor="#d6eacc";
+    elemento.style.fontWeight="bold";
+    elemento.style.fontStyle="italic";
+       
+
+           
+       }
+
         for(let i=0; i< casillas.length; i++){
             casillas[i].value="";
         }
-        location.reload();
+       
     })
     
     .catch(error => console.error('Error:', error));
     
-   
+    
 });
 configInicio();
+
 
 //función para inicio de sesion exitosa:
 function inicioSucces(){
@@ -44,11 +63,9 @@ function inicioSucces(){
 
 }
 //función inicio fallido:
-function inicioFailed(elemento){
-    elemento.style.color = "red";
-    elemento.style.backgroundColor="#d6eacc";
-    elemento.style.fontWeight="bold";
-    elemento.style.fontStyle="italic";
+function inicioFailed(){
+    
+    
 }
 //función que configura la sesión iniciada:
 function configInicio(){     
@@ -59,10 +76,13 @@ function configInicio(){
     let login= document.getElementById('login_inic');
     let register= document.getElementById('registro');
     const sesionIniciada= localStorage.getItem('sesionIniciada');
-    const nombreU= localStorage.getItem('elUser');    
+    const nombreU= localStorage.getItem('elUser');   
+   
     
 
     if(sesionIniciada==='true'){
+      
+
         login.style.display="none";
         register.style.display="none";
         coment.style.display="block";
@@ -73,8 +93,11 @@ function configInicio(){
         welcom.style.fontWeight="bold";
         welcom.style.color="#7dcea0";
         welcom.style.backgroundColor="white";
-        welcom.style.borderRadius="4px";     
+        welcom.style.borderRadius="4px";  
+        
+             
     }else{
+        
         login.style.display="block";
         register.style.display="block";
         coment.style.display="none";
@@ -83,6 +106,7 @@ function configInicio(){
     }   
     
 }
+
 
 //Insertando comentario de registro exitoso o usuario ya ha sido registrado.
 document.getElementById("sign_up").addEventListener("submit", function(event) {
@@ -125,6 +149,12 @@ function cerrarSesion() {
         }
     });
 }
+window.addEventListener('load', function() {
+    if (sessionStorage.getItem('loginSuccess') === 'true') {
+        sessionStorage.removeItem('loginSuccess'); // Limpiar el indicador
+        // Aquí puedes realizar cualquier inicialización necesaria para la página después del login exitoso
+    }
+});
 
 
 
