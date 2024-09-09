@@ -30,17 +30,14 @@ document.getElementById("login_form").addEventListener("submit", function(event)
             
                
         } else {
-            
-    
+
     formularioInicio.style.display="block";    
     elemento.textContent = data.message;
     elemento.style.color = "red";
     elemento.style.backgroundColor="#d6eacc";
     elemento.style.fontWeight="bold";
     elemento.style.fontStyle="italic";
-       
 
-           
        }
 
         for(let i=0; i< casillas.length; i++){
@@ -51,10 +48,8 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     
     .catch(error => console.error('Error:', error));
     
-    
 });
 configInicio();
-
 
 //función para inicio de sesion exitosa:
 function inicioSucces(){
@@ -64,7 +59,6 @@ function inicioSucces(){
 }
 //función inicio fallido:
 function inicioFailed(){
-    
     
 }
 //función que configura la sesión iniciada:
@@ -78,24 +72,18 @@ function configInicio(){
     const sesionIniciada= localStorage.getItem('sesionIniciada');
     const nombreU= localStorage.getItem('elUser');   
    
-    
-
     if(sesionIniciada==='true'){
       
-
         login.style.display="none";
         register.style.display="none";
         coment.style.display="block";
         log_out.style.display= "block";
-
         welcom.innerHTML = `Hello <span style="color: red;">${nombreU}</span>, Welcome to how much do you know about PANELA!!`;
-        
         welcom.style.fontWeight="bold";
         welcom.style.color="#7dcea0";
         welcom.style.backgroundColor="white";
         welcom.style.borderRadius="4px";  
-        
-             
+
     }else{
         
         login.style.display="block";
@@ -106,7 +94,6 @@ function configInicio(){
     }   
     
 }
-
 
 //Insertando comentario de registro exitoso o usuario ya ha sido registrado.
 document.getElementById("sign_up").addEventListener("submit", function(event) {
@@ -137,7 +124,6 @@ document.getElementById("sign_up").addEventListener("submit", function(event) {
     .catch(error => console.error('Error:', error));
 });
 
-
 //Función para cerrar sesión:
 function cerrarSesion() {
     fetch('logout.php')
@@ -155,8 +141,6 @@ window.addEventListener('load', function() {
         // Aquí puedes realizar cualquier inicialización necesaria para la página después del login exitoso
     }
 });
-
-
 
 /*Métodos de 'localStorage':
     1.- setItem(key,value): Almacena un valor bajo una clave.
