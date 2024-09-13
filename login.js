@@ -12,38 +12,34 @@ document.getElementById("login_form").addEventListener("submit", function(event)
     })
     .then(response => response.json())
     .then(data => {
-               
-        
+
+
         let casillas= document.querySelectorAll('.input_sign');
         let formularioInicio=document.getElementById('login_form');
         const elemento = document.getElementById("message");
         
-       
+
         if (data.status === "success") {
-       
+
             const nombreUsuario=data.nombre;
             localStorage.setItem('sesionIniciada','true');
             localStorage.setItem('elUser', nombreUsuario );
             location.reload();
 
-         
-            
-               
         } else {
 
-    formularioInicio.style.display="block";    
-    elemento.textContent = data.message;
-    elemento.style.color = "red";
-    elemento.style.backgroundColor="#d6eacc";
-    elemento.style.fontWeight="bold";
-    elemento.style.fontStyle="italic";
-
-       }
+            formularioInicio.style.display="block";    
+            elemento.textContent = data.message;
+            elemento.style.color = "red";
+            elemento.style.backgroundColor="#d6eacc";
+            elemento.style.fontWeight="bold";
+            elemento.style.fontStyle="italic";
+        }
 
         for(let i=0; i< casillas.length; i++){
             casillas[i].value="";
         }
-       
+
     })
     
     .catch(error => console.error('Error:', error));
@@ -71,9 +67,9 @@ function configInicio(){
     let register= document.getElementById('registro');
     const sesionIniciada= localStorage.getItem('sesionIniciada');
     const nombreU= localStorage.getItem('elUser');   
-   
+
     if(sesionIniciada==='true'){
-      
+
         login.style.display="none";
         register.style.display="none";
         coment.style.display="block";

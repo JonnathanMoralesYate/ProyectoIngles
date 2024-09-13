@@ -17,21 +17,21 @@ $conexion= new mysqli("localhost", "root", "", "usuarios_panela", 3307);
 
 
     if($consulta->fetch()){
-     if (password_verify($passw, $clave)) {
+        if (password_verify($passw, $clave)) {
          // La contraseña es correcta
-         echo json_encode(array("status" =>"success", "message"=>"Bienvenido $user1, iniciaste sesión exitosamente.", "nombre"=>$user1));
-     }else{
+        echo json_encode(array("status" =>"success", "message"=>"Bienvenido $user1, iniciaste sesión exitosamente.", "nombre"=>$user1));
+    }else{
         echo json_encode(array("status" =>"error", "message"=>" Usuario o contrasena incorrectos"));      
- }
- } else {
+}
+} else {
      // La contraseña es incorrecta
-     echo json_encode(array("status" =>"error", "message"=>" Usuario o contrasena incorrectos"));  
- }
+        echo json_encode(array("status" =>"error", "message"=>" Usuario o contrasena incorrectos"));  
+}
 
 $consulta->close();
- 
- 
 
- $conexion->close();  
- 
+
+
+$conexion->close();  
+
 ?> 
