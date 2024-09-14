@@ -25,6 +25,7 @@ document.getElementById("login_form").addEventListener("submit", function(event)
             localStorage.setItem('sesionIniciada','true');
             localStorage.setItem('elUser', nombreUsuario );
             location.reload();
+            
 
          
             
@@ -51,6 +52,7 @@ document.getElementById("login_form").addEventListener("submit", function(event)
 });
 configInicio();
 
+
 //función para inicio de sesion exitosa:
 function inicioSucces(){
     let formularioInicio=document.getElementById('login_form');
@@ -63,17 +65,21 @@ function inicioFailed(){
 }
 //función que configura la sesión iniciada:
 function configInicio(){     
-    
+    let usuario_actual=document.getElementById('autor');
     let welcom= document.getElementById('Bienvenida');
     let coment= document.getElementById('comentarios');
     let log_out=document.getElementById('log_out');
     let login= document.getElementById('login_inic');
     let register= document.getElementById('registro');
     const sesionIniciada= localStorage.getItem('sesionIniciada');
-    const nombreU= localStorage.getItem('elUser');   
+    const nombreU= localStorage.getItem('elUser'); 
+    let vercomentarios= document.getElementById('contenedor_comentarios');
+
    
     if(sesionIniciada==='true'){
-      
+
+        vercomentarios.style.display="block";
+        usuario_actual.textContent=nombreU;
         login.style.display="none";
         register.style.display="none";
         coment.style.display="block";
@@ -85,7 +91,7 @@ function configInicio(){
         welcom.style.borderRadius="4px";  
 
     }else{
-        
+        vercomentarios.style.display="none";
         login.style.display="block";
         register.style.display="block";
         coment.style.display="none";

@@ -52,3 +52,14 @@ document.addEventListener('DOMContentLoaded',function(){
         elemento.style.display='none';        
     });
 });
+
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('comentarios').addEventListener('click', function(){
+        var elemento= document.getElementById('contenedor_comentarios');
+        if(elemento.style.display==="none" || elemento.style.display===""){
+            elemento.style.display="block"; //muestra la ventana de comentarios
+        }else{
+            elemento.style.display="none"; //oculta la ventana de comentarios.
+        }
+    })
+})
