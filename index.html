@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/StyleBarra.css">
+    <link rel="stylesheet" href="css/comment.css">
     <title>How much do you know about PANELA??</title>
 </head>
 <body>
@@ -314,11 +315,27 @@
       <button id="cerrarL" >X</button>
       <div id="message"></div>
       </div>
-
     </form>
+
+<!--Espacio de comentarios -->
+  
+    <div id="contenedor_comentarios">
+      <div id="encab_comentarios" class="caja">Comentarios de los usuarios</div>
+      <div id="comments" class="caja" readonly>          
+    </div>
+      <!--Formulario para registrar comentarios:  -->
+      <form id="RegistroComentarios" method="POST" class="caja" action="./insertando.php" >
+          <div type="text" id="autor" name="autor" class="caja"></div>
+          <textarea id= "comentario" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
+          <button type="submit" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
+      </form>
+      <div id="para_comentario">Hola amigos!!</div>
+    </div>
+  
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/registro.js"></script>
-    <script src="login.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

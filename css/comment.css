@@ -1,0 +1,56 @@
+
+
+
+#comments {
+    width: 100%;
+    aspect-ratio: 4;
+    overflow-y: auto;
+    border: 1px solid black;
+  
+    border-radius: 5px;
+    font-style:italic;
+}
+
+.like-button{
+    border:none;
+    font-style:italic;
+    background-color: orange;
+    border-radius: 4px;
+}
+#autor{
+    display: none;
+}
+#contenedor_comentarios{    
+    position: fixed;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    bottom: 5%;
+    right: 5%;   
+    padding: 0;
+    background-color: white;
+}
+#RegistroComentarios{
+    display:flex;
+    flex-direction: column;
+    justify-items: space-between;
+    width: 100%;
+
+}
+.caja{
+    margin-bottom: 3px;
+    font-style: italic;
+    font-size:smaller;
+}
+#encab_comentarios{
+    position:fixed;
+    
+    background-color: orange;
+    width: 29.8%;
+    text-align: end;
+    border-radius: 4px;
+   
+
+
+}
