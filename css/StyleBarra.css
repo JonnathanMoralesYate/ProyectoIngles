@@ -1,6 +1,6 @@
 #colorBarra{
     background-color: #7dcea0;
-    position: fixed;
+    /*position: fixed;*/ /* deja fijo el contenedor del id*/
     left:0;
     top:0;
     width: 100%;
@@ -65,4 +65,8 @@
     position: fixed;
     top:2%;
     right:2%;
+}
+
+#titulo_carrusel{
+    background-color: #7dcea0;
 }

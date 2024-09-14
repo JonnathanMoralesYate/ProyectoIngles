@@ -22,7 +22,7 @@ document.getElementById("login_form").addEventListener("submit", function(event)
         if (data.status === "success") {
 
             const nombreUsuario=data.nombre;
-            localStorage.setItem('sesionIniciada','true');
+            localStorage.setItem('sesionIniciada','true'); //metodo para establecer una matriz asociativa
             localStorage.setItem('elUser', nombreUsuario );
             location.reload();
             
@@ -78,7 +78,7 @@ function configInicio(){
    
     if(sesionIniciada==='true'){
 
-        vercomentarios.style.display="block";
+        vercomentarios.style.display="block";// muestra el div donde esta contenido los comentarios
         usuario_actual.textContent=nombreU;
         login.style.display="none";
         register.style.display="none";
@@ -137,8 +137,9 @@ function cerrarSesion() {
     .then(response => response.text())
     .then(result => {
         if (result === 'success') {
-            localStorage.removeItem('sesionIniciada');
+            localStorage.removeItem('sesionIniciada'); // 
             configInicio();
+            location.reload(); //metodo para recargar pagina
         }
     });
 }

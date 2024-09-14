@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/StyleBarra.css">
     <link rel="stylesheet" href="css/comment.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <title>How much do you know about PANELA??</title>
 </head>
 <body>
@@ -53,9 +58,12 @@
         </div>
       
         <div class="row mt-5" id="Historia">
-            <div>
-                <h2 class="fs-1 text-center mt-5">Historia de panela</h2>
+          
+          <div id="titulo_carrusel" class="titulo_carrusel1">
+            <div class="text-center mt-5">
+              <h2 class="fs-1 mb-5">Historia Panela</h2>
             </div>
+          </div>
 
         <!--Inicio Carrusel 1 -->
 
@@ -71,8 +79,8 @@
                 <div class="card mb-5 border-0 img-fluid d-block text-center">
                     <img src="img/panela1.jpeg" class="img-fluid" alt="..." width="800" height="800">
                     <div class="card-body">
-                      <h5 class="card-title text-center">Comienzos</h5>
-                      <p class="card-text">La producción de panela en el Tolima se consolidó durante los siglos XVIII y XIX, convirtiéndose en una actividad económica fundamental para la región. Los trapiches paneleros se establecieron principalmente en zonas de clima cálido y templado, como los municipios de Alvarado, Chaparral, Ibagué y Mariquita.
+                      <h5 class="card-title text-center">Beginnings</h5>
+                      <p class="card-text">Panela production in Tolima was consolidated during the 18th and 19th centuries, becoming a fundamental economic activity for the region. The sugar mills were established mainly in areas with warm and temperate climates, such as the municipalities of Alvarado, Chaparral, Ibagué and Mariquita.
                         </p>
                     </div>
                 </div>
@@ -101,7 +109,7 @@
                     <img src="img/productores.png" class="img-fluid" alt="..." width="500" height="500">
                     <div class="card-body">
                       <h5 class="card-title text-center">Principales Productores en el Tolima</h5>
-                      <p class="card-text">
+                      <p class="card-text">Los mayores productores del Tolima en la fabricacion de panela son mariquita, Fresno, Alvarado E Ibague.
                       </p>
                     </div>
                 </div>
@@ -123,9 +131,11 @@
 
         <div class="row mt-5" id="Proceso">
 
-            <div>
-                <h2 class="fs-1 text-center mt-5">Proceso de panela</h2>
+          <div id="titulo_carrusel" class="titulo_carrusel1">
+            <div class="text-center mt-5">
+              <h2 class="fs-1 mb-5">Proceso Panela</h2>
             </div>
+          </div>
 
             <!--Inicio Carrusel 2 -->
 
@@ -239,8 +249,10 @@
 
         <div class="row mt-5" id="Turismo">
 
-            <div">
-                <h2 class="fs-1 text-center  mt-5">Proyectos</h2>
+            <div id="titulo_carrusel" class="titulo_carrusel1">
+              <div class="text-center mt-5">
+                <h2 class="fs-1 mb-5">Proyectos</h2>
+              </div>
             </div>
 
         <!--Inicio Carrusel 3 -->
@@ -285,8 +297,6 @@
 
         </div>
         <!--Fin Carrusel -->
-
-
         
 
         <div class="col-12 text-center text-dark mt-5">
@@ -327,7 +337,7 @@
       <form id="RegistroComentarios" method="POST" class="caja" action="./insertando.php" >
           <div type="text" id="autor" name="autor" class="caja"></div>
           <textarea id= "comentario" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
-          <button type="submit" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
+          <button type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
       </form>
       <div id="para_comentario">Hola amigos!!</div>
     </div>

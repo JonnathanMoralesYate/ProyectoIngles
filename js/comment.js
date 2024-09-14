@@ -10,7 +10,7 @@ function cargarComentarios() {
 
             // Iterar sobre los datos y formatear el texto
             data.forEach(comentario => {
-                comentariosTexto += `<br><span style= "color:orange;">${comentario.autor}<br></span>`;  ``
+                comentariosTexto += `<br><span style= "color:orange;">${comentario.autor}<br></span>`;  
                 comentariosTexto += `${comentario.comentario}<br>`;
                 comentariosTexto += `<span style="font-size: 10px;">Fecha: ${comentario.fecha}<br><button class="like-button" data-id="${comentario.id}">Like</button> ${comentario.likes} likes <br></span>`;
             });
@@ -76,9 +76,11 @@ document.getElementById('RegistroComentarios').addEventListener('submit', functi
     .then(response=>response.text())
     .then(result=>{
         alert('comentario agregado con éxito');
+        
     })
     .catch(error => console.error('Error:', error));
 });
+
 //función para incrementar el númeo de likes:
 function incrementarLike(comentarioId,liker) {
     return fetch('like.php', {
@@ -95,7 +97,12 @@ function incrementarLike(comentarioId,liker) {
     })
     .catch(error => console.error('Error:', error));
     
-f}
+}
+
+function recargarComen(){
+    location.reload();
+}
+
 
 
 
