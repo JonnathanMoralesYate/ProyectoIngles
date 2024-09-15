@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded',function(){
             botComent.textContent="Show Comments";
            
         }
-      
+      alert(sesionIniciada);
+    
     })
 })
 function recargarComen(){

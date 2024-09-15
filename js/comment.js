@@ -83,21 +83,35 @@ document.getElementById('RegistroComentarios').addEventListener('submit', functi
 
 //función para incrementar el númeo de likes:
 function incrementarLike(comentarioId,liker) {
-    return fetch('like.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ id: comentarioId, name:liker})
-    })
-    .then(response => response.json())
-    .then(result=>{
-        location.reload();
-        alert('Acabas de dar like');
-    })
-    .catch(error => console.error('Error:', error));
+    sesionInciada= localStorage.getItem('sesionIniciada');
+
+    if(sesionInciada==='true'){
+
+        return fetch('like.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: comentarioId, name:liker})
+        })
+        .then(response => response.json())
+        .then(result=>{
+            location.reload();
+            alert('Acabas de dar like');
+            document.getElementById('comments').style.display="block";
+        })
+        .catch(error => console.error('Error:', error));
+        
+
+    }else{
+        alert("Debes iniciar sesión para interactuar en los comentarios.");
+    }
+    
     
 }
+
+
+
 
 function recargarComen(){
     location.reload();

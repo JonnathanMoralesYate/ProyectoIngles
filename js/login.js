@@ -60,7 +60,8 @@ function inicioFailed(){
     
 }
 //función que configura la sesión iniciada:
-function configInicio(){     
+function configInicio(){  
+    let botComent= document.getElementById('comentarios');
     let usuario_actual=document.getElementById('autor');
     let welcom= document.getElementById('Bienvenida');
     var coment= document.getElementById('contenedor_comentarios');
@@ -80,6 +81,7 @@ function configInicio(){
    
     if(sesionIniciada==='true'){
 
+        botComent.textContent="Hide Comments";
         coment.style.display= "block";
         coment1.style.display="block";
         coment2.style.display="block";
@@ -101,6 +103,7 @@ function configInicio(){
        coment2.style.display="none";
         log_out.style.display= "none";
         welcom.style.display="none";
+        botComent.textContent="Show Comments";
     }   
     
 }
