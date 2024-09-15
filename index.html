@@ -48,7 +48,7 @@
                                       <a id="login_inic" class="btn btn-outline-light text-dark" href="#" role="button">Login</a>
                                         <a id="registro" class="btn btn-outline-light text-dark" href="#" role="button">Sign up</a>
                                   
-                                        <a id="comentarios" class="btn btn-outline-light text-dark" href="#" role="button">Comentarios</a>
+                                        <a id="comentarios" class="btn btn-outline-light text-dark" href="#" role="button">Show Comments</a>
                                       <a id="log_out" onclick="cerrarSesion()"   class="btn btn-outline-light text-dark" href="#" role="button">Log Out</a>
                                       <div id="Bienvenida">Welcome!!</div>
                                   </div>
@@ -336,11 +336,10 @@
       <!--Formulario para registrar comentarios:  -->
       <form id="RegistroComentarios" method="POST" class="caja" action="./insertando.php" >
           <div type="text" id="autor" name="autor" class="caja"></div>
-          <textarea id= "comentario" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
-          <button type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
+          <textarea id="comentario1" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
+          <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
       </form>
-      <div id="para_comentario">Hola amigos!!</div>
-    </div>
+     </div>
   
 
     <script src="js/bootstrap.bundle.min.js"></script>

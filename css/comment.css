@@ -22,12 +22,12 @@
 }
 #contenedor_comentarios{    
     position: fixed;
-    display:none;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30%;
-    bottom: 5%;
-    right: 5%;   
+    width: 40%;
+    bottom: 1%;
+    right: 1%;   
     padding: 0;
     background-color: white;
 }
@@ -50,7 +50,7 @@
     width: 29.8%;
     text-align: end;
     border-radius: 4px;
-   
-
-
+}
+#comentario1, #comentario2{
+    display:none;
 }

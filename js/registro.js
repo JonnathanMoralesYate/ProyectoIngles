@@ -55,11 +55,31 @@ document.addEventListener('DOMContentLoaded',function(){
 
 document.addEventListener('DOMContentLoaded',function(){
     document.getElementById('comentarios').addEventListener('click', function(){
-        var elemento= document.getElementById('contenedor_comentarios');
-        if(elemento.style.display==="none" || elemento.style.display===""){
-            elemento.style.display="block"; //muestra la ventana de comentarios
+        var elemento1= document.getElementById('contenedor_comentarios');
+        var elemento2= document.getElementById('comentario1');
+        var elemento3= document.getElementById('comentario2');
+        var botComent= document.getElementById('comentarios');
+       
+        const sesionIniciada= localStorage.getItem('sesionIniciada');
+        if((elemento2.style.display==="none" || elemento2.style.display==="")& sesionIniciada==='true'){
+            elemento2.style.display="block"; //muestra la ventana de comentarios
+            elemento3.style.display="block";
         }else{
-            elemento.style.display="none"; //oculta la ventana de comentarios.
+            elemento2.style.display="none"; //oculta la ventana de comentarios.
+            elemento3.style.display="none";
         }
+        if(elemento1.style.display==='none'||elemento1.style.display===""){
+            elemento1.style.display='block';
+            botComent.textContent="Hide Comments";
+        
+        }else{
+            elemento1.style.display='none';
+            botComent.textContent="Show Comments";
+           
+        }
+      
     })
 })
+function recargarComen(){
+    location.reload();
+}

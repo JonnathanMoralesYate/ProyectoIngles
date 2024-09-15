@@ -61,7 +61,7 @@ document.getElementById('RegistroComentarios').addEventListener('submit', functi
     event.preventDefault();
 
     const autor= document.getElementById('autor').textContent;
-    const comentario= document.getElementById('comentario').value;
+    const comentario= document.getElementById('comentario1').value;
 
     fetch('insertando.php', {
         method:'POST',
