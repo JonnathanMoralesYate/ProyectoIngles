@@ -96,11 +96,11 @@ function configInicio(){
         welcom.style.borderRadius="4px";  
 
     }else{
-       
+    
         login.style.display="block";
         register.style.display="block";
-       coment1.style.display="none";
-       coment2.style.display="none";
+        coment1.style.display="none";
+        coment2.style.display="none";
         log_out.style.display= "none";
         welcom.style.display="none";
         botComent.textContent="Show Comments";

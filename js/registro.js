@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function(){
         var elemento2= document.getElementById('comentario1');
         var elemento3= document.getElementById('comentario2');
         var botComent= document.getElementById('comentarios');
-       
+    
         const sesionIniciada= localStorage.getItem('sesionIniciada');
         if((elemento2.style.display==="none" || elemento2.style.display==="")& sesionIniciada==='true'){
             elemento2.style.display="block"; //muestra la ventana de comentarios
@@ -75,9 +75,8 @@ document.addEventListener('DOMContentLoaded',function(){
         }else{
             elemento1.style.display='none';
             botComent.textContent="Show Comments";
-           
+        
         }
-      
     
     })
 })
