@@ -1,28 +1,28 @@
 @font-face{
-    font-family: titulos;
+    font-family: "titulos";
     src: url(/font/Bright\ DEMO.otf);
 }
 
 @font-face{
-    font-family: subtitulos;
+    font-family: "subtitulos";
     src: url(/font/Kalam-Regular.ttf);
 }
 
 @font-face{
-    font-family: textonormal;
+    font-family: "textonormal";
     src: url(/font/Kalam-Light.ttf);
 }
 
 
 
-.titulo{
-    font-family: titulos;
+#titulo{
+    font-family: "titulos";
 }
 
 h5{
-    font-family: subtitulos;
+    font-family: "subtitulos";
 }
 
 p {
-    font-family: textonormal;
+    font-family: "textonormal";
 }
