@@ -6,8 +6,8 @@
     width: 100%;
 }
 #login_inic,#registro, #comentarios, #log_out, #test_yourself{
-    height:2vw;
-    width: 8vw;
+    height:3vw;
+    width: 10vw;
     color:white;
     text-align: center;
     text-justify: distribute;

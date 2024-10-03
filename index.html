@@ -339,32 +339,108 @@
 
     <!-- FORMULARIOS DE PREGUNTAS  -->
      <!-- ============================================================================================================ -->
-    <div id="carrusel_preguntas" class="elemento_invisible">
-     <form id="pregunta1" class="formulario_preguntas">
-      <fieldset>
-          <legend id="titulo_pregunta">Choose the right answer:<br>
-          </legend>
-          <div id="question">Esta es la pregunta: </div>
+  <!-- PREGUNTA 1----------------------------------------------------------------------------------------------------- -->
+  <div id="cont_cuestionarios" class="elemento_invisible">
 
-          <label class="elemento_pregunta">
-              <input  type="radio" name="trivia1" value="ok"> Rojo
-          </label><br>
-          <label class="elemento_pregunta">
-              <input type="radio" name="trivia1" value="wrong"> Verde
-          </label><br>
-          <label class="elemento_pregunta">
-              <input type="radio" name="trivia1" value="wrong"> Azul
-          </label><br>
-          <label class="elemento_pregunta">
-              <input type="radio" name="trivia1" value="wrong"> Amarillo
-          </label><br>
-      </fieldset>
-      <div id="contenedor_boton"><button id="boton_pregunta" type="submit" class="elemento_pregunta">Enviar</button><div style="width: 2%;">    </div><button id="boton_pregunta" type="submit" class="elemento_pregunta">Cerrar</button></div>
-  </form>
+     <div id="cuestionario1" class="cuestionario">
+    <form id="pregunta1" class="formulario_preguntas">
   
+          <div class="titulo_pregunta">Choose the right answer:</div><br>
+          <div id="question">Esta es la pregunta:1</div>
+
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=2> Rojo</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0>Verde</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0> Azul</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0> Amarillo</label><br>
+     
+          <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta">Enviar</button></div>
+    </form>
+  
+  </div>
+    <!--PREGUNTA 2 ------------------------------------------------------------------------------------------------------------------ -->
+  <div id="cuestionario2" class="cuestionario">
+      <form id="pregunta2" class="formulario_preguntas">
+      
+           <div class="titulo_pregunta">Choose the right answer:</div><br>
+           <div id="question">Esta es la pregunta:2 </div>
+ 
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="2"> Rojo</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0">Verde</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0"> Azul</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0"> Amarillo</label><br>
+    
+           <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta">Enviar</button></div>
+
+    </form>
+   
+  </div>
+  <!--PREGUNTA 3 ------------------------------------------------------------------------------------------------------------------ -->
+
+  <div id="cuestionario3" class="cuestionario">
+    <form id="pregunta1" class="formulario_preguntas">
+     
+         <div class="titulo_pregunta">Choose the right answer:</div><br>
+        <div id="question">Esta es la pregunta:3 </div>
+
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="2">  Rojo</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Verde</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Azul </label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Amarillo</label><br>
+     
+         <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta">Enviar</button></div>
+
+    </form>
+ 
+</div>
+<!-- PREGUNTA 4----------------------------------------------------------------------------------------------------------------- -->
+<div id="cuestionario4" class="cuestionario">
+  <form id="pregunta1" class="formulario_preguntas">
+
+       <div class="titulo_pregunta">Choose the right answer:</div><br>
+       <div id="question">Esta es la pregunta:4 </div>
+
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="2">Rojo</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Verde</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Azul</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Amarillo</label><br>
+     
+       <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta">Enviar</button></div>
+
+</form>
+
+</div>
+<!-- PREGUNTA 5----------------------------------------------------------------------------------------------------------- -->
+  <div id="cuestionario5" class="cuestionario">
+    <form id="pregunta1" class="formulario_preguntas">
+    
+        <div class="titulo_pregunta">Choose the right answer:</div><br>
+        <div id="question">Esta es la pregunta:5 </div>
+
+        <label class="elemento_pregunta"><input  type="radio" name="trivia5" value="2"> Rojo</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Verde</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Azul </label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Amarillo</label><br>
+    
+        <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta">Enviar</button></div>
+
+    </form>
+  </div>
+  <!-- FORMULARIO DE RESULTADOS------------------------------------------------------------------------------------- -->
+  <div id="cuestionario6" class="cuestionario">
+    <div id="contenedor_resultado" class="formulario_preguntas">
+
+      <div class="diciendo_score" id="diciendo_score"> <div class="diciendo_score"> Your scrore is  --</div><div id="puntaje" class="diciendo_score"></div><div id="puntos" class="diciendo_score"> points</div></div>
+
+      <div id="contenedor_boton"><button  id="boton_pregunta" class="elemento_pregunta" onclick="cerrarTest()">Cerrar</button></div>
+
     </div>
 
+  </div>
+
+</div>
+<!-- =================================================================================================================================== -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/trivia.js"></script>
     <script src="js/registro.js"></script>
     <script src="js/comment.js"></script>
     <script src="js/login.js"></script>
