@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         if(elemento1.style.display==='none'||elemento1.style.display===""){
             elemento1.style.display='block';
-            botComent.textContent="Hide Comments";
+            botComent.textContent="Comments";
         
         }else{
             elemento1.style.display='none';
-            botComent.textContent="Show Comments";
+            botComent.textContent="Comments";
         
         }
     
