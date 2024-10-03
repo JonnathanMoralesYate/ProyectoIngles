@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/preguntas.css">
 
     <title>How much do you know about PANELA??</title>
 </head>
@@ -49,10 +50,11 @@
                                     </div>
 
                                   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                    <a id="test_yourself" class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">test yourserlf</a>
                                       <a id="login_inic" class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">Login</a>
-                                        <a id="registro" class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">Sign up</a>
+                                      <a id="registro" class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">Sign up</a>
                                   
-                                        <a id="comentarios" class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">Show Comments</a>
+                                      <a id="comentarios" class="btn btn-outline-light text-dark fs-6 fw-bold" href="#" role="button">Show Comments</a>
                                       <a id="log_out" onclick="cerrarSesion()"   class="btn btn-outline-light text-dark fs-5 fw-bold" href="#" role="button">Log Out</a>
                                       <div id="Bienvenida" class="fw-bold">Welcome!!</div>
                                   </div>
@@ -336,7 +338,34 @@
           <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
       </form>
     </div>
+
+
+    <!-- FORMULARIOS DE PREGUNTAS  -->
+     <!-- ============================================================================================================ -->
+    <div id="carrusel_preguntas" class="elemento_invisible">
+     <form id="pregunta1" class="formulario_preguntas">
+      <fieldset>
+          <legend id="titulo_pregunta">Choose the right answer:<br>
+          </legend>
+          <div id="question">Esta es la pregunta: </div>
+
+          <label class="elemento_pregunta">
+              <input  type="radio" name="trivia1" value="ok"> Rojo
+          </label><br>
+          <label class="elemento_pregunta">
+              <input type="radio" name="trivia1" value="wrong"> Verde
+          </label><br>
+          <label class="elemento_pregunta">
+              <input type="radio" name="trivia1" value="wrong"> Azul
+          </label><br>
+          <label class="elemento_pregunta">
+              <input type="radio" name="trivia1" value="wrong"> Amarillo
+          </label><br>
+      </fieldset>
+      <div id="contenedor_boton"><button id="boton_pregunta" type="submit" class="elemento_pregunta">Enviar</button><div style="width: 2%;">    </div><button id="boton_pregunta" type="submit" class="elemento_pregunta">Cerrar</button></div>
+  </form>
   
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/registro.js"></script>
