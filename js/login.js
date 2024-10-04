@@ -81,7 +81,7 @@ function configInicio(){
    
     if(sesionIniciada==='true'){
 
-        botComent.textContent="Hide Comments";
+        botComent.textContent="Comments";
         coment.style.display= "block";
         coment1.style.display="block";
         coment2.style.display="block";
@@ -103,7 +103,7 @@ function configInicio(){
         coment2.style.display="none";
         log_out.style.display= "none";
         welcom.style.display="none";
-        botComent.textContent="Show Comments";
+        botComent.textContent="Comments";
     }   
     
 }
