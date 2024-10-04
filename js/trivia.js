@@ -23,9 +23,11 @@ tomar_test.addEventListener('click', function(){
     let elemento1=document.getElementById('cont_cuestionarios');       
     
     elemento1.className= 'cont_cuestionarios';
-    localStorage.setItem('test', 'true');    
+    localStorage.setItem('test', 'true'); 
+    
     tomar_test.className='elemento_invisible';   
     ind=-1;
+    
     siguientePregunta() ;
     
     
@@ -69,6 +71,17 @@ elementos_pregunta.forEach((form, index)=>{
         if(test_run==='true'){
             elemento1.className='cont_cuestionarios';
             tomar_test.className= 'elemento_invisible';
+
+            window.addEventListener('beforeunload', function (event) {
+                // Mensaje de advertencia (no siempre se mostrará el texto)
+                const confirmationMessage = '¿Estás seguro de que deseas salir?';
+            
+                // Para mostrar el mensaje, necesitas establecer la propiedad returnValue
+                event.returnValue = confirmationMessage; // Esto es necesario para algunos navegadores
+            
+                // Si quieres que aparezca el mensaje en navegadores antiguos, puedes hacer esto:
+                return confirmationMessage; // Aunque la mayoría de los navegadores no lo mostrarán
+            });
                      
 
         }else{
@@ -78,9 +91,10 @@ elementos_pregunta.forEach((form, index)=>{
     }
 
     function cerrarTest(){
-        localStorage.removeItem('test_4');
+        
         localStorage.removeItem('test');
         location.reload();
+       
     }
-
-    
+    //FUNCIÓN PARA CAMBIAR EL VALOR DEL ATRIBUTO testi de local storage:
+   
