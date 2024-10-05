@@ -38,7 +38,7 @@ testRunnig();
 
 let puntaje=[0,0,0,0,0];
 let puntaje_total=0;
-let score= document.getElementById('puntaje');
+
 
 const elementos_pregunta= document.querySelectorAll('.formulario_preguntas');
 elementos_pregunta.forEach((form, index)=>{
@@ -51,14 +51,13 @@ elementos_pregunta.forEach((form, index)=>{
         if(seleccion){
             puntaje[index]= parseFloat(seleccion.value);                 
             puntaje_total+=puntaje[index];        
-            siguientePregunta();
-            
+            siguientePregunta();  
     
         }else{
-            alert("Choose an answer to continue.")
+            alert("Choose an answer to continue.");
         }
-        
-            score.textContent="-->   "+ puntaje_total;
+            anunciarResultado(puntaje_total);
+           
         })        
 
     })
@@ -96,5 +95,29 @@ elementos_pregunta.forEach((form, index)=>{
         location.reload();
        
     }
-    //FUNCIÓN PARA CAMBIAR EL VALOR DEL ATRIBUTO testi de local storage:
-   
+    //FUNCIÓN PARA ANUNCIAR EL RESULTADO: 
+    
+   function anunciarResultado(x){
+        let mensaje_congratulations="";
+        let score= document.getElementById('puntaje');
+        let Congratulations=document.getElementById('congratulations');
+
+    if(x>=8){
+        mensaje_congratulations="Congratulations!! =)";
+        Congratulations.className="masdeOcho";
+        score.className="masdeOcho";
+        
+        
+    }else if(x>= 6){
+        mensaje_congratulations="It is no bad. =|";
+        Congratulations.className="masdeSeis";
+        score.className="masdeSeis";
+    }else{
+        mensaje_congratulations="You can do better. =(";
+        Congratulations.className="menosdeSeis";
+        score.className="menosdeSeis";
+    }
+    Congratulations.textContent= mensaje_congratulations;
+    score.textContent="->  "+ puntaje_total;
+
+   }

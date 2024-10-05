@@ -8,8 +8,8 @@ html, body{
     position: fixed;
     top:30%;
     left:30%; 
-    width: 30%;
-    aspect-ratio: 1.5;
+    width: 40%;
+    aspect-ratio: 2;
 }
 .formulario_preguntas{
     
@@ -19,7 +19,7 @@ html, body{
     border: solid #7dcea0 2px;
     
     width: 100%;  
-    aspect-ratio: 1.5; 
+    aspect-ratio: 2; 
 }
 .elemento_pregunta{
     margin-bottom: 3%;
@@ -66,4 +66,31 @@ html, body{
 }
 .elemento_invisible{
     display: none;
+}
+.diciendo_score{
+    color:gray;
+    font-size: 2vw;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+.masdeOcho{
+    color:green;
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+}
+.masdeSeis{
+    color:orange;
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+}
+.menosdeSeis{
+    color: red;
+    font-size:2vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
 }

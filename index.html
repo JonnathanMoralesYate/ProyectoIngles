@@ -305,10 +305,10 @@
 
     <form id="sign_up" action="registroUno.php" class="sign_up" method="post">
       <div id="formulario"><h4>Registro</h4>
-      <input type="text" name="usuario" placeholder="Digita tu Usuario" class= "input_sign" id="usuario" required>
-      <input type="email" name="email" placeholder="Digita tu correo"  class= "input_sign" id="correo" required>
-      <input type="password"name="password" placeholder="Establece una contraseña"  class= "input_sign" id="passw" required>
-      <input type="submit" name="registrarse"  class= "boton_Login" id="input_sign" value="submit">
+      <input type="text" name="usuario" placeholder="Type your user" class= "input_sign" id="usuario" required>
+      <input type="email" name="email" placeholder="Type an email"  class= "input_sign" id="correo" required>
+      <input type="password"name="password" placeholder="Set a password"  class= "input_sign" id="passw" required>
+      <input type="submit" name="registrarse"  class= "boton_Login" id="input_sign" value="Sign Up">
       <button id="cerrar" >X</button>
       <div id="messageReg"></div>
       </div>
@@ -317,8 +317,8 @@
 
     <form id="login_form"  action="login.php"  class="login_form" method="post">
       <div id="formulario1"><h4>Login</h4>
-      <input type="text" name="user" placeholder="Digita tu Usuario o email" class= "input_sign" id="usuario" required>     
-      <input type="password"name="passw" placeholder="Ingresa tu contraseña"  class= "input_sign" id="passw" required>
+      <input type="text" name="user" placeholder="Type your user or email" class= "input_sign" id="usuario" required>     
+      <input type="password"name="passw" placeholder="Type your password"  class= "input_sign" id="passw" required>
       <input type="submit" name="Login_buttom"  class= "boton_Login" id="Login_buttom" value="Login">
       <button id="cerrarL" >X</button>
       <div id="message"></div>
@@ -328,14 +328,14 @@
 <!--Espacio de comentarios -->
   
     <div id="contenedor_comentarios">
-      <div id="encab_comentarios" class="caja">Comentarios de los usuarios</div>
+      <div id="encab_comentarios" class="caja">Users' comments</div>
       <div id="comments" class="caja" readonly>          
     </div>
       <!--Formulario para registrar comentarios:  -->
       <form id="RegistroComentarios" method="POST" class="caja" action="./insertando.php" >
           <div type="text" id="autor" name="autor" class="caja"></div>
           <textarea id="comentario1" name="comentario" class="caja" placeholder="Escribe tu comentario" required></textarea>
-          <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Comparte un Comentario</button>
+          <button id="comentario2" type="submit" onclick="recargarComen()" class="caja" name="enviarcomentario" >Share a comment</button>
       </form>
     </div>
 
@@ -351,10 +351,10 @@
           <div class="titulo_pregunta">Choose the right answer:</div><br>
           <div id="question">1.- ¿What is the main raw material in the production of panela in Tolima?</div>
 
-          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=2> Rojo</label><br>
-          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0>Verde</label><br>
-          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0> Azul</label><br>
-          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0> Amarillo</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0>Beans</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0>Rice</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=2>Sugar cane</label><br>
+          <label class="elemento_pregunta"><input type="radio" name="trivia1" value=0>Coconut Oil</label><br>
      
           <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta" onclick="cambiartesti()">Enviar</button></div>
     </form>
@@ -367,10 +367,10 @@
            <div class="titulo_pregunta">Choose the right answer:</div><br>
            <div id="question">2.- ¿What are the main panela-producing municipalities in Tolima?" </div>
  
-           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="2"> Rojo</label><br>
-           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0">Verde</label><br>
-           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0"> Azul</label><br>
-           <label class="elemento_pregunta"><input type="radio" name="trivia2" value="0"> Amarillo</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value=0>They are Melgar, Honda and Venadillo</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value=0>They are Rovira, Roncesvalles and Coello</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value=0>They are Espinal, Guamo and Natagaima</label><br>
+           <label class="elemento_pregunta"><input type="radio" name="trivia2" value=2>They are  Mariquita, Fresno, Alvarado and Ibagué.</label><br>
     
            <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta" onclick="cambiartesti()" >Enviar</button></div>
 
@@ -385,10 +385,10 @@
          <div class="titulo_pregunta">Choose the right answer:</div><br>
         <div id="question">3.- ¿What is the eco-efficient fuel they use to produce panela? </div>
 
-         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="2">  Rojo</label><br>
-         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Verde</label><br>
-         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Azul </label><br>
-         <label class="elemento_pregunta"><input type="radio" name="trivia3" value="0"> Amarillo</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value=0>Gas</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value=2>Sugarcane bagasse.</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value=0>Coal</label><br>
+         <label class="elemento_pregunta"><input type="radio" name="trivia3" value=0>None of the above</label><br>
      
          <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta" onclick="cambiartesti()">Enviar</button></div>
 
@@ -402,10 +402,10 @@
        <div class="titulo_pregunta">Choose the right answer:</div><br>
        <div id="question">4.- ¿what centuries did panela production in Tolima become established in? </div>
 
-       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="2">Rojo</label><br>
-       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Verde</label><br>
-       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Azul</label><br>
-       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value="0">Amarillo</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value=2>18th and 19th centuries.</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value=0>20th and 21st centuries.</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value=0>1st and 2nd centuries BC</label><br>
+       <label class="elemento_pregunta"> <input type="radio" name="trivia4" value=0>15th and 16th centuries</label><br>
      
        <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta" onclick="cambiartesti()">Enviar</button></div>
 
@@ -419,10 +419,10 @@
         <div class="titulo_pregunta">Choose the right answer:</div><br>
         <div id="question">5.- ¿What are the differences between Tolima panela and other panellas produced in Colombia?</div>
 
-        <label class="elemento_pregunta"><input  type="radio" name="trivia5" value="2"> Rojo</label><br>
-        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Verde</label><br>
-        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Azul </label><br>
-        <label class="elemento_pregunta"><input type="radio" name="trivia5" value="0"> Amarillo</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value=0>It is the cheapest of all</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value=0>Panela from Tolima is green</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value=0>All of them are the same</label><br>
+        <label class="elemento_pregunta"><input type="radio" name="trivia5" value=2>Panela from Tolima is recognized for its sweet flavor and natural aroma.</label><br>
     
         <div id="contenedor_boton"><button type="submit" id="boton_pregunta" class="elemento_pregunta" onclick="cambiartesti()">Enviar</button></div>
 
@@ -435,7 +435,8 @@
       <div id="congratulations"></div>
       <div id="sisabes"></div>
 
-      <div class="diciendo_score" id="diciendo_score"> <div class="diciendo_score"> Your scrore is  --</div><div id="puntaje" class="diciendo_score"></div><div id="puntos" class="diciendo_score"> points</div></div>
+      <div class="diciendo_score" id="diciendo_score"> <div class="diciendo_score"> Your scrore is: </div><div id="puntaje" ></div><div id="puntos" class="diciendo_score"> points</div></div>
+      <div id="colofon"></div>
 
       <div id="contenedor_boton"><button  id="boton_pregunta" class="elemento_pregunta" onclick="cerrarTest()">Cerrar</button></div>
 
