@@ -24,6 +24,9 @@ html, body{
 .elemento_pregunta{
     margin-bottom: 3%;
     margin-left: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    font-style: italic;
 }
 #contenedor_boton{
     display:flex;
